@@ -1,0 +1,22 @@
+version: '3'
+services:
+  dynamodb:
+    image: amazon/dynamodb-local
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath . -optimizeDbBeforeStartup
+    volumes:
+      - dynamodb:/home/dynamodblocal
+    ports:
+      - 8000:8000
+  awscli:
+    image: amazon/aws-cli:2.0.56
+    entrypoint: [""]
+    tty: true
+    environment:
+      AWS_ACCESS_KEY_ID: fake_access_key
+      AWS_SECRET_ACCESS_KEY: fake_secret_access_key
+      DYNAMODB_REGION: ap-northeast-1
+    command:
+      - /bin/sh
+volumes:
+  dynamodb:
+    driver: local
