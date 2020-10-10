@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-docker-compose exec -T awscli aws dynamodb \
+aws dynamodb \
   --region ap-northeast-1 \
   --endpoint-url http://dynamodb:8000 \
     create-table \
