@@ -5,3 +5,4 @@ ENV AWS_ACCESS_KEY_ID=fake_access_key\
     DYNAMODB_REGION=ap-northeast-1
 
 COPY bin bin
+COPY seeds seeds

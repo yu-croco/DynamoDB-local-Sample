@@ -1,0 +1,22 @@
+{
+  "SampleTable": [
+    {
+      "PutRequest": {
+        "Item": {
+          "userId": {
+            "N": "1"
+          },
+          "userName": {
+            "S": "山田太郎"
+          },
+          "age": {
+            "N": "29"
+          },
+          "contactNumber": {
+            "S": "080-1234-5678"
+          }
+        }
+      }
+    }
+  ]
+}
